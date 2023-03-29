@@ -106,6 +106,7 @@ ntlm
 NTFS
 NUMA
 nupkg
+odata
 onmicrosoft
 onprem
 OutlookiOS
