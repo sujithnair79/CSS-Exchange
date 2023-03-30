@@ -49,9 +49,9 @@ function Get-CloudServiceEndpoint {
             "ChinaCloud" {
                 $environmentName = "AzureChinaCloud"
                 $graphApiEndpoint = "https://microsoftgraph.chinacloudapi.cn"
-                $exchangeOnlineEndpoint = "https://outlook.office365.cn"
+                $exchangeOnlineEndpoint = "https://partner.outlook.cn"
                 $autodiscoverSecureName = "https://autodiscover-s.partner.outlook.cn"
-                $azureADEndpoint = "https://login.chinacloudapi.cn"
+                $azureADEndpoint = "https://login.partner.microsoftonline.cn"
                 break
             }
         }
