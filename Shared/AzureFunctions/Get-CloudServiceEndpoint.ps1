@@ -23,31 +23,35 @@ function Get-CloudServiceEndpoint {
         # https://learn.microsoft.com/graph/deployments#microsoft-graph-and-graph-explorer-service-root-endpoints
         switch ($EndpointName) {
             "Global" {
-                $EnvironmentName = "AzureCloud"
+                $environmentName = "AzureCloud"
                 $graphApiEndpoint = "https://graph.microsoft.com"
                 $exchangeOnlineEndpoint = "https://outlook.office.com"
-                $AzureADEndpoint = "https://login.microsoftonline.com"
+                $autodiscoverSecureName = "https://autodiscover-s.outlook.com"
+                $azureADEndpoint = "https://login.microsoftonline.com"
                 break
             }
             "USGovernmentL4" {
-                $EnvironmentName = "AzureUSGovernment"
+                $environmentName = "AzureUSGovernment"
                 $graphApiEndpoint = "https://graph.microsoft.us"
                 $exchangeOnlineEndpoint = "https://outlook.office365.us"
-                $AzureADEndpoint = "https://login.microsoftonline.us"
+                $autodiscoverSecureName = "https://autodiscover-s.office365.us"
+                $azureADEndpoint = "https://login.microsoftonline.us"
                 break
             }
             "USGovernmentL5" {
-                $EnvironmentName = "AzureUSGovernment"
+                $environmentName = "AzureUSGovernment"
                 $graphApiEndpoint = "https://dod-graph.microsoft.us"
                 $exchangeOnlineEndpoint = "https://outlook.office365.us"
-                $AzureADEndpoint = "https://login.microsoftonline.us"
+                $autodiscoverSecureName = "https://autodiscover-s.office365.us"
+                $azureADEndpoint = "https://login.microsoftonline.us"
                 break
             }
             "ChinaCloud" {
-                $EnvironmentName = "AzureChinaCloud"
+                $environmentName = "AzureChinaCloud"
                 $graphApiEndpoint = "https://microsoftgraph.chinacloudapi.cn"
                 $exchangeOnlineEndpoint = "https://outlook.office365.cn"
-                $AzureADEndpoint = "https://login.chinacloudapi.cn"
+                $autodiscoverSecureName = "https://autodiscover-s.partner.outlook.cn"
+                $azureADEndpoint = "https://login.chinacloudapi.cn"
                 break
             }
         }
@@ -57,6 +61,7 @@ function Get-CloudServiceEndpoint {
             EnvironmentName        = $EnvironmentName
             GraphApiEndpoint       = $graphApiEndpoint
             ExchangeOnlineEndpoint = $exchangeOnlineEndpoint
+            AutoDiscoverSecureName = $autodiscoverSecureName
             AzureADEndpoint        = $AzureADEndpoint
         }
     }
