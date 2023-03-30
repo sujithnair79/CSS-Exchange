@@ -12,6 +12,7 @@ function Get-CloudServiceEndpoint {
         It returns a PSCustomObject with the following properties:
             GraphApiEndpoint: The endpoint for the Microsoft Graph API
             ExchangeOnlineEndpoint: The endpoint for Exchange Online
+            AutoDiscoverSecureName: The endpoint for Autodiscover
             AzureADEndpoint: The endpoint for Azure Active Directory
             EnvironmentName: The name of the Azure environment
     #>
@@ -41,8 +42,8 @@ function Get-CloudServiceEndpoint {
             "USGovernmentL5" {
                 $environmentName = "AzureUSGovernment"
                 $graphApiEndpoint = "https://dod-graph.microsoft.us"
-                $exchangeOnlineEndpoint = "https://outlook.office365.us"
-                $autodiscoverSecureName = "https://autodiscover-s.office365.us"
+                $exchangeOnlineEndpoint = "https://outlook-dod.office365.us"
+                $autodiscoverSecureName = "https://autodiscover-s-dod.office365.us"
                 $azureADEndpoint = "https://login.microsoftonline.us"
                 break
             }
