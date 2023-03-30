@@ -58,11 +58,11 @@ function Get-CloudServiceEndpoint {
     }
     end {
         return [PSCustomObject]@{
-            EnvironmentName        = $EnvironmentName
+            EnvironmentName        = $environmentName
             GraphApiEndpoint       = $graphApiEndpoint
             ExchangeOnlineEndpoint = $exchangeOnlineEndpoint
             AutoDiscoverSecureName = $autodiscoverSecureName
-            AzureADEndpoint        = $AzureADEndpoint
+            AzureADEndpoint        = $azureADEndpoint
         }
     }
 }
