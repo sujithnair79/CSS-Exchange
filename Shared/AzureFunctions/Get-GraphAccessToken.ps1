@@ -197,8 +197,8 @@ function Get-GraphAccessToken {
                 AccessToken = $tokens.access_token
                 TenantId    = (DecodeJwtToken $tokens.id_token).Payload.tid
             }
-        } else {
-            exit
         }
+
+        exit
     }
 }
