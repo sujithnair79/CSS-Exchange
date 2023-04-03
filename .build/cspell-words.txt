@@ -112,6 +112,7 @@ onprem
 OutlookiOS
 Perflib
 perfmon
+PKCE
 Pkcs
 Prelicensing
 PROCMON
